@@ -1,6 +1,6 @@
 {
   "name": "vue-mono",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a Vue Package that helps you integrate Mono - https://withmono.com/ easily",
   "main": "dist/mono.min.js",
   "scripts": {
