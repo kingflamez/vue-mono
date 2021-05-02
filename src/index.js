@@ -13,7 +13,7 @@ const MonoJS = {
           
             methods: {
                 $launchMono(options) {
-                    const connect = new Connect(publicKey, options);
+                    const connect = new Connect({key: publicKey, ...options});
                     connect.setup();
                     connect.open()
                 },
