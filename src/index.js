@@ -1,25 +1,30 @@
 const MonoJS = {
-    install(Vue, {publicKey}) {    
-        Vue.mixin({
-            mounted() {
-                const monoJS = 'https://connect.withmono.com/connect.js'
-                const script = document.createElement('script')
-                script.src = monoJS
-                // Only run if mono script has not been added to the body
-                if (!document.querySelector(`[src="${monoJS}"]`)) {
-                    document.body.appendChild(script)
-                }
-            },
-          
-            methods: {
-                $launchMono(options) {
-                    const connect = new Connect({key: publicKey, ...options});
-                    connect.setup();
-                    connect.open()
-                },
-            }
-        })
-    }
-}
+  install(Vue, { publicKey }) {
+    Vue.mixin({
+      mounted() {
+        const monoJS = "https://connect.withmono.com/connect.js";
+        const script = document.createElement("script");
+        script.src = monoJS;
+        // Only run if mono script has not been added to the body
+        if (!document.querySelector(`[src="${monoJS}"]`)) {
+          document.body.appendChild(script);
+        }
+      },
 
-export default MonoJS
+      methods: {
+        $launchMono(options) {
+          const connect = new Connect({ key: publicKey, ...options });
+          connect.setup();
+          connect.open();
+        },
+        $reAuthorise(options, token) {
+          const connect = new Connect({ key: publicKey, ...options });
+          connect.reauthorise(token);
+          connect.open();
+        },
+      },
+    });
+  },
+};
+
+export default MonoJS;
