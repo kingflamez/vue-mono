@@ -129,7 +129,8 @@ export default {
           alert("user closed the widget.");
         },
       };
-      const token = this.$reAuthorise(options, token); // call the backend to fetch the re-authorisation token for the account
+      const token = ""; // call the backend to fetch the re-authorisation token for the account
+      this.$reAuthorise(options, token);
     },
   },
 };
