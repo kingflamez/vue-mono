@@ -138,7 +138,7 @@ export default {
 ```
 
 Please checkout
-[Mono Documentation](https://www.notion.so/Documentation-3cda635f4aa54e9bb6947ab60305db92) for more explanation
+[Mono Documentation](https://docs.mono.co/docs) for more explanation.
 
 Follow on Twitter [@mrflamez\_](https://twitter.com/mrflamez_)
 
